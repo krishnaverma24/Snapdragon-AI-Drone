@@ -1,0 +1,23 @@
+{
+  "session_id": "flight_test_001",
+  "timestamp": "2026-09-30T23:45:00Z",
+  "hardware_backend": "Snapdragon_Hexagon_NPU",
+  "frame_resolution": "1920x1080",
+  "ai_processing_time_ms": 12.4,
+  "detections": [
+    {
+      "object_class": "obstacle_tree",
+      "confidence_score": 0.92,
+      "bounding_box_coordinates": [120, 45, 300, 510],
+      "estimated_distance_meters": 3.8
+    },
+    {
+      "object_class": "landing_pad",
+      "confidence_score": 0.88,
+      "bounding_box_coordinates": [600, 800, 750, 950],
+      "estimated_distance_meters": 12.5
+    }
+  ],
+  "telemetry_action_triggered": "EMERGENCY_STOP_AND_HOVER",
+  "radio_transmission_status": "SUCCESS"
+}
