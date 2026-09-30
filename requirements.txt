@@ -1,3 +1,16 @@
-qai-hub>=0.11.0
-pyserial>=3.5
-opencv-python>=4.9.0
+# ==========================================
+# Snapdragon Edge-Compute Ground Station
+# Dependency Requirements File
+# ==========================================
+
+# --- 1. Qualcomm AI & Machine Learning ---
+qai-hub>=0.11.0          # To download and interface with Qualcomm AI Hub models
+onnxruntime>=1.17.0      # Required for running quantized YOLO models on Snapdragon NPU natively
+numpy>=1.26.0            # Essential for fast array/matrix manipulation of image data arrays
+
+# --- 2. Vision & Camera Processing ---
+opencv-python>=4.9.0     # OpenCV for capturing, decoding, and processing the live drone camera feed
+
+# --- 3. Telemetry & Hardware Communication ---
+pyserial>=3.5            # Serial communication bridge for transmitting strings to nRF24L01 / basic radio modules
+pymavlink>=2.4.41        # Advanced MAVLink protocol library for direct communication with Pixhawk / Drone Flight Controllers
