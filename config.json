@@ -1,0 +1,18 @@
+{
+  "ai_model": {
+    "model_name": "yolo-v8-det-quantized",
+    "framework": "onnxruntime",
+    "confidence_threshold": 0.75,
+    "target_fps": 30
+  },
+  "telemetry": {
+    "radio_module": "nRF24L01",
+    "baud_rate": 115200,
+    "port": "COM4",
+    "protocol": "Serial/MAVLink"
+  },
+  "hardware_acceleration": {
+    "enable_npu": true,
+    "processor": "Snapdragon_X_Elite"
+  }
+}
