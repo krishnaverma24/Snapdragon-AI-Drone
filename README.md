@@ -10,7 +10,7 @@ This project bridges the raw edge-computing power of a Snapdragon PC with physic
 **Processing (NPU):** Runs `yolo-v8-det-quantized` natively on the Snapdragon Hexagon NPU.
 **Output System Log:**
 
-```text
+
 --- Snapdragon AI Ground Station ---
 [SYSTEM] Initializing Snapdragon NPU...
 [SYSTEM] Loading optimized YOLO vision model from Qualcomm AI Hub...
@@ -18,3 +18,23 @@ This project bridges the raw edge-computing power of a Snapdragon PC with physic
 [NPU] AI identified: Obstacle at 2.5m
 [RADIO] Transmitting command to Flight Controller: EMERGENCY_STOP & HOVER
 
+## 🏗️ System Architecture Diagram
+
+```text
+[ UAV / Drone in Air ] 
+      |  (Live Camera Feed via Radio)
+      v
+[ Telemetry Receiver ] ---> (USB/Serial)
+      |
+      v
+[ Snapdragon AI PC (Ground Station) ]
+   ├── CPU: Receives video frame data
+   ├── NPU: Runs YOLOv8/11 (Qualcomm AI Hub)
+   └── Python Bridge: Generates Flight Command
+      |
+      v
+[ Telemetry Transmitter ] ---> (Radio Signal)
+      |
+      v
+[ Drone Flight Controller (Pixhawk/NX4 Pro) ] 
+   └── Executes Maneuver (e.g., EMERGENCY_STOP)
