@@ -17,3 +17,10 @@ This project bridges the raw edge-computing power of a Snapdragon PC with physic
 [NPU] Processing live video frame locally (Zero Cloud Latency)...
 [NPU] AI identified: Obstacle at 2.5m
 [RADIO] Transmitting command to Flight Controller: EMERGENCY_STOP & HOVER
+**2. requirements.txt (Dependencies dikhane ke liye)**
+Phir se `Add file` -> `Create new file` karo. Naam `requirements.txt` likho aur yeh chota sa text paste karke **Commit changes** dabao:
+
+```text
+qai-hub>=0.11.0
+pyserial>=3.5
+opencv-python>=4.9.0
